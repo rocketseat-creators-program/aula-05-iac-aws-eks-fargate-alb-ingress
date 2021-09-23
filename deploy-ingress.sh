@@ -57,7 +57,8 @@ create_service_account() {
 
     eksctl utils associate-iam-oidc-provider \
         --region ${CLUSTER_REGION} \
-        --cluster=${CLUSTER_NAME}
+        --cluster=${CLUSTER_NAME} \
+        --approve
         check_sucessful
 
     eksctl create iamserviceaccount \

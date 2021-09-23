@@ -63,11 +63,6 @@ kubectl apply -k "github.com/aws/eks-charts/stable/aws-load-balancer-controller/
         check_sucessful
 }
 
-NAME="k8s-rocketseat"
-ENV="dev"
-ENV_VERSION="v1"
-CLUSTER_REGION="us-east-1"
-
 validate_envs
     check_sucessful
 
