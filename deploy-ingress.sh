@@ -55,6 +55,11 @@ create_policy() {
 
 create_service_account() {
 
+    eksctl utils associate-iam-oidc-provider \
+        --region ${CLUSTER_REGION} \
+        --cluster=${CLUSTER_NAME}
+        check_sucessful
+
     eksctl create iamserviceaccount \
         --cluster=${CLUSTER_NAME} \
         --region ${CLUSTER_REGION} \
@@ -63,6 +68,7 @@ create_service_account() {
         --attach-policy-arn=${POLICY_ARN} \
         --override-existing-serviceaccounts \
         --approve
+        check_sucessful
 }
 
 deploy_ingress() {
