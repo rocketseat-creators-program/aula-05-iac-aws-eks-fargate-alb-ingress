@@ -21,7 +21,7 @@ deploy() {
         -e ENV_VERSION="${ENV_VERSION}" \
         -e NAME="${NAME}" \
         -e CLUSTER_REGION="${CLUSTER_REGION}" \
-        ${AWS_ACCOUNT_REGISTRY}.dkr.ecr.${AWS_REGION}.amazonaws.com/iac-aws-eks-fargate-ingress:1.0.3-deploy
+        ${AWS_ACCOUNT_REGISTRY}.dkr.ecr.${AWS_REGION}.amazonaws.com/iac-aws-eks-fargate-ingress:1.0.4-deploy
 }
 
 AWS_ACCOUNT_REGISTRY=$(aws sts get-caller-identity --output text |awk '{print $1}')
