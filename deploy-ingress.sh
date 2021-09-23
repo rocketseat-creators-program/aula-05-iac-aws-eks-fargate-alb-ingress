@@ -29,6 +29,7 @@ get_vpc() {
 
     VPC_ID=$(
             aws ec2 describe-vpcs \
+                --region ${CLUSTER_REGION} \
                 --filters Name=tag:product,Values=network \
                     Name=tag:environment/${ENV},Values=1 \
                     Name=tag:environmentVersion/${ENV_VERSION},Values=1 \
@@ -84,11 +85,6 @@ deploy_ingress() {
         -n kube-system
         check_sucessful
 }
-
-# NAME="k8s-rocketseat"
-# ENV="dev"
-# ENV_VERSION="v1"
-# CLUSTER_REGION="us-east-1"
 
 validate_envs
     check_sucessful
