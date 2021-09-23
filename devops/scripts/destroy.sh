@@ -21,7 +21,7 @@ deploy() {
         -e ENV_VERSION="${ENV_VERSION}" \
         -e NAME="${NAME}" \
         -e CLUSTER_REGION="${CLUSTER_REGION}" \
-        ${AWS_ACCOUNT_REGISTRY}.dkr.ecr.${AWS_REGION}.amazonaws.com/iac-aws-eks-fargate-ingress:1.0.5-destroy
+        ${AWS_ACCOUNT_REGISTRY}.dkr.ecr.${AWS_REGION}.amazonaws.com/iac-aws-eks-fargate-ingress:1.0.6-destroy
 
 }
 
