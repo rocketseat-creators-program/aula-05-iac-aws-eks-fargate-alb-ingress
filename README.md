@@ -1,4 +1,4 @@
-# iac-aws-eks-fargate-alb-ingress# iac-aws-eks-fargate 
+# iac-aws-eks-fargate-alb-ingress
 O objetivo desse projeto é publicar o ALB ingress em um cluster EKS com Fargate existente
 
 # Setup do ambiente
@@ -8,7 +8,7 @@ Instale os seguintes itens em sua maquina:
 3.	Instalar o Docker
 3.	Instalar o Helm
 
-# Criando o cluster
+# Criando o ingress
 1. Abra o prompt de comando
 2. Acesse a pasta raiz do projeto
 3. Rode o comando: docker build -t deploy -f devops/iac/deploy/Dockerfile .
@@ -22,7 +22,7 @@ Instale os seguintes itens em sua maquina:
 	-e CLUSTER_REGION="us-east-1" \
 	deploy
 
-# Destruindo o cluster
+# Destruindo o ingress
 1. Abra o prompt de comando
 2. Acesse a pasta raiz do projeto
 3. Rode o comando: docker build -t destroy -f devops/iac/destroy/Dockerfile .
